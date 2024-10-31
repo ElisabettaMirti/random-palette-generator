@@ -1,13 +1,14 @@
 const btnEl = document.querySelector('button#generate');
 
-btnEl.addEventListener('click', createColorDivs);
+btnEl.addEventListener('click', createPalette);
 
 
 //funzione per generare tutta la palette
 function createPalette(){
     for (let i = 0; i < 6; i++){
         const containerEl = document.querySelector('main#container');
-        const divEl = document.createElement('div.singleColor');
+        const divEl = document.createElement('div');
+        divEl.className = 'singleColor';
         divEl.style.backgroundColor = getColor();
         containerEl.appendChild(divEl);
     }

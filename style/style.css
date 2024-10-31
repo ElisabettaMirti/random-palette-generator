@@ -47,3 +47,8 @@ main{
     background-color: beige;
     border-radius: 2rem;
 }
+
+div.singleColor{
+    width: 4rem;
+    height: 4rem;
+}
