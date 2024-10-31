@@ -5,8 +5,10 @@ btnEl.addEventListener('click', createPalette);
 
 //funzione per generare tutta la palette
 function createPalette(){
-    for (let i = 0; i < 6; i++){
-        const containerEl = document.querySelector('main#container');
+    const containerEl = document.querySelector('main#container');
+    containerEl.innerHTML = ""; //svuoto il container
+
+    for (let i = 0; i < 6; i++){        
         const divEl = document.createElement('div');
         divEl.className = 'singleColor';
         divEl.style.backgroundColor = getColor();
