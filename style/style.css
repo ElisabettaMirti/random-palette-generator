@@ -37,6 +37,10 @@ button#generate:hover{
     transform: scale(1.05);
 }
 
+button#generate:active{
+    background-color: rgb(195, 135, 219);
+}
+
 main{
     margin: 2rem;
     padding: 1rem;

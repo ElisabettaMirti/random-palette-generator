@@ -4,13 +4,14 @@ const btnEl = document.querySelector('button#generate');
 
 
 //funzione per generare tre numeri per l'RGB
-function getColor(colorsNumber){
+function getColor(){
     const colorArray = [];
-    while (colorArray.lenght < colorsNumber) {
-        newColorNum = getNumbers(0, 255);
+    while (colorArray.length < 3) {
+        let newColorNum = getNumbers(0, 255);
         colorArray.push(newColorNum);
-        return colorArray;
     }
+    let rgbString = 'rgb(' + colorArray.join(',') + ')'; // Creazione della stringa RGB;
+    return rgbString;
 }
 
 
