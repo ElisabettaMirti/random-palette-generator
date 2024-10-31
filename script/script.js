@@ -1,6 +1,17 @@
 const btnEl = document.querySelector('button#generate');
 
+btnEl.addEventListener('click', createColorDivs);
 
+
+//funzione per generare tutta la palette
+function createPalette(){
+    for (let i = 0; i < 6; i++){
+        const containerEl = document.querySelector('main#container');
+        const divEl = document.createElement('div.singleColor');
+        divEl.style.backgroundColor = getColor();
+        containerEl.appendChild(divEl);
+    }
+}
 
 
 //funzione per generare tre numeri per l'RGB
