@@ -11,7 +11,9 @@ function createPalette(){
     for (let i = 0; i < 6; i++){        
         const divEl = document.createElement('div');
         divEl.className = 'singleColor';
-        divEl.style.backgroundColor = getColor();
+        let colorCode = getColor();
+        divEl.style.backgroundColor = colorCode;
+        divEl.innerHTML = colorCode;
         containerEl.appendChild(divEl);
     }
 }
