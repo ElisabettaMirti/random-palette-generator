@@ -2,6 +2,21 @@ const btnEl = document.querySelector('button#generate');
 
 btnEl.addEventListener('click', createPalette);
 
+//funzione per copiare il codice colore
+function copyRGB(event){
+    const textRGB = event.target.innerText;
+    navigator.clipboard.writeText(textRGB)
+    .then(() => {
+        alert("Copied!");
+    })
+    .catch((error) => {
+        alert("Ops! Something went wrong :(", error);
+    });
+}
+
+
+
+
 
 //funzione per generare tutta la palette
 function createPalette(){
