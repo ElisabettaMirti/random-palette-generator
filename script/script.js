@@ -1,6 +1,8 @@
 const btnEl = document.querySelector('button#generate');
-
 btnEl.addEventListener('click', createPalette);
+
+
+
 
 //funzione per copiare il codice colore
 function copyRGB(event){
@@ -10,12 +12,9 @@ function copyRGB(event){
         alert("Copied!");
     })
     .catch((error) => {
-        alert("Ops! Something went wrong :(", error);
+        console.log("Ops! Something went wrong :(", error);
     });
 }
-
-
-
 
 
 //funzione per generare tutta la palette
@@ -28,13 +27,15 @@ function createPalette(){
         containerEl.appendChild(artEl);
 
         const divEl = document.createElement('div'); //variabile per il div del colore
-        divEl.className = 'singleColor'
+        divEl.className = 'singleColor';
         let colorCode = getColor();
         divEl.style.backgroundColor = colorCode;
 
         const codeEl = document.createElement('p'); //variabile per il codice colore da copiare
         codeEl.className = 'color-code';
+        codeEl.classList.add('copyable'); //classe per renderlo copiabile negli appunti
         codeEl.innerHTML = colorCode;
+        codeEl.addEventListener('click', copyRGB); //evento per copiare il codice RGB
 
         artEl.appendChild(divEl);
         artEl.appendChild(codeEl);
