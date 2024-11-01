@@ -51,10 +51,40 @@ main{
     align-items: center;
 }
 
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 div.singleColor{
     width: 6rem;
     height: 8rem;
     border-radius: 1rem;
     box-shadow: rgb(80, 80, 80) 0 2px 14px;
     font-family: sans-serif;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+
+div.singleColor:hover{
+    transform: scale(1.02);
+    border: 2px solid white;
+}
+
+p.color-code{
+    font-family: "Delius Unicase", cursive;
+    font-size: .8rem;
+    color: rgb(63, 62, 62);
+    border: 1px solid grey;
+    border-radius: 2rem;
+    padding: .4rem .8rem;
+    box-shadow: 4px 7px 5px -5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+p.color-code:hover{
+    transform: scale(1.02);
 }
