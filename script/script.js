@@ -9,12 +9,20 @@ function createPalette(){
     containerEl.innerHTML = ""; //svuoto il container
 
     for (let i = 0; i < 6; i++){        
-        const divEl = document.createElement('div');
-        divEl.className = 'singleColor';
+        const artEl = document.createElement('article'); //varibile per l'articolo
+        containerEl.appendChild(artEl);
+
+        const divEl = document.createElement('div'); //variabile per il div del colore
+        divEl.className = 'singleColor'
         let colorCode = getColor();
         divEl.style.backgroundColor = colorCode;
-        divEl.innerHTML = colorCode;
-        containerEl.appendChild(divEl);
+
+        const codeEl = document.createElement('p'); //variabile per il codice colore da copiare
+        codeEl.className = 'color-code';
+        codeEl.innerHTML = colorCode;
+
+        artEl.appendChild(divEl);
+        artEl.appendChild(codeEl);
     }
 }
 
