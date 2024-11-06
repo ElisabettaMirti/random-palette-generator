@@ -55,8 +55,23 @@ function getColor(){
 }
 
 
-//funzione per genrare un numero casuale tra un numero minimo e un numero massimo
+//funzione per generare un numero casuale tra un numero minimo e un numero massimo
 function getNumbers(min, max){
     num = Math.floor(Math.random() * ((max + 1) - min)) + min;
     return num;
+}
+
+
+//funzione per convertire un numero decimale in esadecimale
+function getHex (element) {
+    let hex = element.toString(16);
+
+    return hex.lenght == 1 ? "0" + hex : hex;  // condizione per aggiungere uno 0 davanti in caso esca una cifra singola
+}
+
+
+//funzione per convertire il colore d RGB a HEX
+function rgbToHex (r, g, b){
+
+    return "#" + getHex(r) + getHex(g) + getHex(b);
 }
