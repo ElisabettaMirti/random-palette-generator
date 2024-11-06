@@ -65,7 +65,7 @@ div.singleColor{
     border-radius: 1rem;
     box-shadow: rgb(80, 80, 80) 0 2px 14px;
     font-family: sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     transition: all .3s ease;
 }
 
@@ -85,6 +85,7 @@ p.color-code{
     box-shadow: 4px 7px 5px -5px rgba(0,0,0,0.5);
     cursor: pointer;
     transition: all .3s ease;
+    margin-top: .8rem;
 }
 
 p.color-code:hover{

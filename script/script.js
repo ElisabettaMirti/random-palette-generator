@@ -37,8 +37,15 @@ function createPalette(){
         codeEl.innerHTML = colorCode;
         codeEl.addEventListener('click', copyRGB); //evento per copiare il codice RGB
 
+        const hexEl = document.createElement('p');
+        hexEl.className = 'color-code';
+        hexEl.classList.add('copyable');
+        hexEl.innerHTML = rgbToHex(colorCode);
+        hexEl.addEventListener('click', copyRGB);
+
         artEl.appendChild(divEl);
         artEl.appendChild(codeEl);
+        artEl.appendChild(hexEl);
     }
 }
 
@@ -71,7 +78,14 @@ function getHex (element) {
 
 
 //funzione per convertire il colore d RGB a HEX
-function rgbToHex (r, g, b){
+function rgbToHex (rgbString) {
 
-    return "#" + getHex(r) + getHex(g) + getHex(b);
+    const result = rgbString.match(/\d+/g);
+    const r = parseInt(result[0], 10);
+    const g = parseInt(result[1], 10);
+    const b = parseInt(result[2], 10);
+
+    const elementToHex = (c) => c.toString(16).padStart(2, "0");
+
+    return `#${elementToHex(r)}${elementToHex(g)}${elementToHex(b)}`;
 }
