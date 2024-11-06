@@ -42,7 +42,8 @@ button#generate:active{
 }
 
 main{
-    margin: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
     padding: 2rem;
     background-color: beige;
     border: 4px dashed rgb(165, 131, 238);
